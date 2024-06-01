@@ -1,7 +1,7 @@
 #include <stdio.h>
 void perfect(int number);
 int main(void) {
-    for(int i = 1; i <= 1000000; i++) {
+    for(int i = 1; i <= 1000; i++) {
         perfect(i);
     }
     return 0;
@@ -14,6 +14,12 @@ void perfect(int number) {
         }
     }
     if(count == number) {
-        printf("%d\n", count);
+        for(int j = 1; j < count; ++j) {
+            if(count % j == 0) {
+                printf("%d", j);
+                if(j < count) printf("+");
+            }
+        }
+        printf(" = %d\n", count);
     }
 }
