@@ -7,6 +7,6 @@ int main(void) {
     return 0;
 }
 int time_oclock(int hous, int min, int sec) {
-    if(hous >= 12) hous -= 12;
+    if (hous >= 12) hous -= 12;
     return hous * 3600 + min * 60 + sec;
 }

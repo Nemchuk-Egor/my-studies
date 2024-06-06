@@ -2,16 +2,16 @@
 int main(void) {
     int sqr;
     scanf("%d", &sqr);
-    if(sqr < 1) {
+    if (sqr < 1) {
         puts("fail");
     } else {
-        if(sqr > 20) {
+        if (sqr > 20) {
             puts("fail");
         } else {
             int i = 0;
-            while(i != sqr) {
+            while (i != sqr) {
                 int j = 0;
-                while(j != sqr) {
+                while (j != sqr) {
                     printf("*");
                     j++;
                 }

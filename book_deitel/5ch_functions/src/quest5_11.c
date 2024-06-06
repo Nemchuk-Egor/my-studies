@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 float roundToInteger(float number);
 float roundToTenth(float number);
 float roundToHunreths(float number);
@@ -16,15 +16,7 @@ int main(void) {
     }
     return 0;
 }
-float roundToInteger(float number) {
-    return number = floor(number * 10 + .5) / 10;
-}
-float roundToTenth(float number) {
-    return number = floor(number * 100 + .5) / 100;
-}
-float roundToHunreths(float number) {
-    return number = floor(number * 1000 + .5) / 1000;
-}
-float roundToThousandths(float number) {
-    return number = floor(number * 10000 + .5) / 10000;
-}
+float roundToInteger(float number) { return number = floor(number * 10 + .5) / 10; }
+float roundToTenth(float number) { return number = floor(number * 100 + .5) / 100; }
+float roundToHunreths(float number) { return number = floor(number * 1000 + .5) / 1000; }
+float roundToThousandths(float number) { return number = floor(number * 10000 + .5) / 10000; }

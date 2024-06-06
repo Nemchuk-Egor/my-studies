@@ -15,8 +15,8 @@ int main(void) {
 }
 float calculateCharges(float number) {
     float charges;
-    if(number <= 3.0) charges = 2.00;
-    if(number > 3.0) charges = (number - 3.0) * 0.50 + 2.0;
+    if (number <= 3.0) charges = 2.00;
+    if (number > 3.0) charges = (number - 3.0) * 0.50 + 2.0;
     if (charges > 10.0) charges = 10.0;
     return charges;
 }

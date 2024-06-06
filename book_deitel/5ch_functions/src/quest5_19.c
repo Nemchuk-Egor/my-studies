@@ -7,8 +7,8 @@ int main(void) {
     return 0;
 }
 void func(int a) {
-    for(int i = 1; i <= a; i++) {
-        for(int j = 1; j <= a; j++) printf("*");
+    for (int i = 1; i <= a; i++) {
+        for (int j = 1; j <= a; j++) printf("*");
         puts("");
     }
 }

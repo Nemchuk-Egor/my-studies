@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 int main(void) {
-/*a*/
+    /*a*/
     int number = 0;
     srand(time(NULL));
     number = rand() % 5;
     printf("%d\n", 2 + number * 2);
-/*b*/
+    /*b*/
     printf("%d\n", 3 + number * 2);
-/*c*/ 
+    /*c*/
     printf("%d\n", 6 + number * 4);
     return 0;
 }

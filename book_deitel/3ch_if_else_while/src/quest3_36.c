@@ -2,7 +2,7 @@
 int main(void) {
     int number, num, num2, temp = 0, i = 1;
     scanf("%d", &number);
-    while(number > 0) {
+    while (number > 0) {
         num = number % 10;
         num2 = num * i;
         temp += num2;

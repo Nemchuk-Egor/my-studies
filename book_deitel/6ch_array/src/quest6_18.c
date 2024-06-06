@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdbool.h>
+#include <stdio.h>
 #define SIZE 10
 void someFunction(const int b[], int startIndex, int size);
 int main(void) {
@@ -10,8 +10,8 @@ int main(void) {
     return 0;
 }
 void someFunction(const int b[], int startIndex, int size) {
-    if(startIndex >= size) {
-        someFunction(b,startIndex - 1, size);
+    if (startIndex >= size) {
+        someFunction(b, startIndex - 1, size);
         printf("%d ", b[startIndex]);
     }
 }

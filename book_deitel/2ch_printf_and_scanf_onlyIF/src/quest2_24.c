@@ -5,7 +5,7 @@
 int main(void) {
     int num;
     scanf("%d", &num);
-    if(num % 2 == 0) printf("YES");
-    if(num % 2 == 1) printf("NO");
+    if (num % 2 == 0) printf("YES");
+    if (num % 2 == 1) printf("NO");
     return 0;
 }

@@ -1,14 +1,14 @@
 #include <stdio.h>
-int main (void) {
+int main(void) {
     unsigned int passes = 0, failures = 0, student = 1;
     int result;
     while (student <= 10) {
         scanf("%d", &result);
-        if(result == 1) {
+        if (result == 1) {
             passes++;
             student++;
         }
-        if(result == 2) {
+        if (result == 2) {
             failures++;
             student++;
         }

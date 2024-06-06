@@ -7,7 +7,7 @@ int main(void) {
         printf("Зарплата: $%.2f\n", 200 + (sum_sell * 0.09));
         puts("");
         printf("%s", "Введите сумму продаж в долларах (-1 если ввод закончен): ");
-        scanf("%f", &sum_sell);        
+        scanf("%f", &sum_sell);
     }
     return 0;
 }

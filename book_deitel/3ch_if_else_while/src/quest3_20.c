@@ -4,7 +4,7 @@ int main(void) {
     float principal, rate;
     printf("%s", "Введите основную сумму ссуды (-1 если ввод закончен): ");
     scanf("%f", &principal);
-    while(principal != -1) {
+    while (principal != -1) {
         printf("%s", "Введите процентную ставку: ");
         scanf("%f", &rate);
         printf("%s", "Введите срок ссуды в днях: ");

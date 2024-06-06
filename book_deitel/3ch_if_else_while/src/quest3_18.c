@@ -14,7 +14,7 @@ int main(void) {
         scanf("%f", &sum_credit);
         printf("%s", "Введите предельный размер кредита: ");
         scanf("%f", &credit);
-        if(start_balance + sum_sell - sum_credit > credit) {
+        if (start_balance + sum_sell - sum_credit > credit) {
             printf("Счет %d\n", number);
             printf("Предельный размер кредита: %.2f\n", credit);
             printf("Баланс %.2f\n", start_balance + sum_credit);

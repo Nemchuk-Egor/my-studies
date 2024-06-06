@@ -4,7 +4,7 @@ int main(void) {
     float rate, over_rate;
     printf("%s", "Введите количество отработыных часов (-1 если ввод закончен): ");
     scanf("%d", &hour);
-    while(hour != -1) {
+    while (hour != -1) {
         printf("%s", "Введите почасовой тариф работника ($00.00): ");
         scanf("%f", &rate);
         if (hour > 40) {
