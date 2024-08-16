@@ -7,7 +7,7 @@ ERROR = ERROR
 
 SHELL := /bin/bash
 
-all: s21_grep test_diff
+all: s21_grep
 
 s21_grep: s21_grep.o s21_grep_lib.o
 	$(CC) $(CFLAGS) -o $@ $^

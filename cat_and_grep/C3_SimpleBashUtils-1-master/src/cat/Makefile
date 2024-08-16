@@ -3,7 +3,7 @@ CFLAGS = -Wall -Werror -Wextra -std=c11
 FILE = test_case_cat.txt
 SHELL := /bin/bash
 
-all: s21_cat run_script test_diff
+all: s21_cat
 
 s21_cat: s21_cat.o s21_cat_lib.o
 	$(CC) $(CFLAGS) -o $@ $^
