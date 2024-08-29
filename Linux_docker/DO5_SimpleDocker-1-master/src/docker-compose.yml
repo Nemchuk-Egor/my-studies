@@ -1,0 +1,25 @@
+
+services:
+  mynginx:
+    build: .
+    container_name: mynginx
+    hostname: mynginx
+    networks:
+      - nginx
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    hostname: nginx
+    volumes:
+      - ./server/nginx/nginx2.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:8080"
+    depends_on:
+      - mynginx
+    networks:
+      - nginx
+
+networks:
+  nginx:
+    driver: bridge
