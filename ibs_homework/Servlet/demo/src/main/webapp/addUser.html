@@ -1,0 +1,62 @@
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Добавить пользователя</title>
+	<script>
+		async function submitForm(event) {
+			event.preventDefault(); // Предотвращает стандартную отправку формы
+
+			// Получение данных из формы
+			const name = document.querySelector('input[name="name"]').value;
+			const surname = document.querySelector('input[name="surname"]').value;
+			const salary = document.querySelector('input[name="salary"]').value;
+
+			// Формирование JSON-объекта
+			const userData = {
+				name: name,
+				surname: surname,
+				salary: parseFloat(salary)
+			};
+
+			try {
+				const response = await fetch('add', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify(userData)
+				});
+
+				if (!response.ok) {
+					throw new Error('Ошибка при добавлении пользователя');
+				}
+
+				// Получение ответа от сервера
+				const result = await response.json();
+				document.getElementById('result').innerText = 'Пользователь успешно добавлен!';
+			} catch (error) {
+				document.getElementById('result').innerText = 'Ошибка при добавлении пользователя.';
+			}
+		}
+	</script>
+</head>
+<body>
+<h1>Добавить пользователя</h1>
+<form id="userForm"
+	  onsubmit="submitForm(event)">
+	<label>Имя:
+		<input type="text" name="name" required>
+	</label><br>
+	<label>Фамилия:
+		<input type="text" name="surname" required>
+	</label><br>
+	<label>Зарплата:
+		<input type="number" name="salary" required>
+	</label><br>
+	<button type="submit">Создать</button>
+</form>
+
+<p id="result" style="color: green;"></p>
+<a href="index.jsp">Домой</a>
+</body>
+</html>
