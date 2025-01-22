@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: TestTaskForVtb
+
+  kafka:
+    bootstrap-servers: kafka:9092
+    consumer:
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    distribution:
+      percentiles-histogram:
+        "[http.server.requests]": true
+
